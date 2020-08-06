@@ -1,0 +1,19 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .card{
+      width: 1300px;
+      text-align: -webkit-center;
+      margin-top: 20px;
+      margin-left: 25px;
+  }
+  mat-toolbar{
+    margin-top: 10px; 
+  }
+  .btn-primary{
+      margin-top: 10px;
+      margin-left: 25px;
+  }
+  .btn{
+      outline: none;
+  }

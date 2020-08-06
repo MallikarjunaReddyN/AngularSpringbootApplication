@@ -1,0 +1,59 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  mat-toolbar{
+    margin-top: 10px; 
+  }
+mat-card{
+    max-width: 600px;
+    margin: 2em auto;
+    text-align: center;
+    height: 400px;
+    margin-top: 100px;
+}
+.header{
+    text-align: center;
+    color: tomato;
+}
+.full-width{
+    width: 80%;
+}
+.forgot-password{
+    padding-left: 0px;
+}
+.email-input{
+padding-top: 10px;
+}
+.aLink{
+    float: right;
+    padding-right: 60px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.aLink:hover{
+    color: rgb(9, 12, 209);
+}
+.btn{
+    background: tomato;
+    width: 200px;
+    color: white;
+    margin-top: 15px;
+}
+.btn:hover, .reg-btn:hover{
+background: rgb(12, 12, 11);
+color: white;
+}
+
+.reg-btn:focus{
+    outline: none;
+}
+hr{
+    width: 100px;
+    background: tomato;
+    border: none;
+    height: 3px;
+}
+
+.menu:focus{
+    outline: none;
+}

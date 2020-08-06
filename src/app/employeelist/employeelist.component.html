@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-flat-button class="reg-btn" (click)="logout()">Logout</button>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div class="card">
+  <mat-card>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>  
+        <th>Name</th>  
+        <th>Email</th> 
+        <th>JobTitle</th> 
+        <th>EmpId</th>
+        <th>Phone No</th>  
+        <th>Actions</th>   
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees;">  
+        <td>{{employee.name}}</td>  
+        <td>{{employee.email}}</td> 
+        <td>{{employee.jobTitle}}</td>  
+        <td>{{employee.empId}}</td>
+        <td>{{employee.phone}}</td> 
+        <td><button (click)="deleteEmployee(employee.id)" class="btn"><mat-icon>delete</mat-icon></button>
+          <button (click)="updateEmployee(employee.id)" class="btn" style="margin-left: 10px"><mat-icon style="color: orangered;">launch</mat-icon></button>
+      </td>  
+    </tr> 
+    </tbody>   
+  </table>
+  </mat-card>
+  </div>
+  <button type="button" (click)="addEmployee()" class="btn btn-primary">Add Employee</button>

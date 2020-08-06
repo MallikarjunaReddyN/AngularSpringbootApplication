@@ -1,0 +1,43 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  mat-toolbar{
+    margin-top: 10px; 
+  }
+mat-card{
+    max-width: 600px;
+    margin: 2em auto;
+    text-align: center;
+    height: 450px;
+    margin-top: 100px;
+}
+.header{
+    text-align: center;
+    color: tomato;
+}
+.full-width{
+    width: 80%;
+}
+.email-input{
+padding-top: 10px;
+}
+.btn{
+    background: tomato;
+    width: 190px;
+    color: white;
+    margin-top: 15px;
+}
+#btn1{
+    background: blue;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.btn:hover{
+background: rgb(12, 12, 11);
+}
+hr{
+    width: 100px;
+    background: tomato;
+    border: none;
+    height: 3px;
+}

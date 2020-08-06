@@ -1,0 +1,54 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+
+    <button mat-flat-button class="reg-btn" (click)="loginback()">Login</button>
+
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+<mat-card>
+    <mat-card-content>
+        <div class="header"><h2>REGISTER</h2><hr>
+        </div>
+        <form name="registerform" [formGroup]="registerform" (ngSubmit)="register()">
+            <div class="email-input">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>User Name</mat-label>
+                    <input formControlName="uname" matInput [(ngModel)]="user.userName" required />
+                    <mat-error *ngIf="registerform.get('uname').errors?.required">User name is required</mat-error>
+                    <mat-error *ngIf="registerform.get('uname').errors?.minlength">Username must between 5 to 20</mat-error>
+                    <mat-error *ngIf="registerform.get('uname').errors?.maxlength">Username must between 5 to 20</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="email-input">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput [(ngModel)]="user.userMail" required />
+                    <mat-error *ngIf="registerform.get('email').errors?.required">Email is required</mat-error>
+                    <mat-error *ngIf="registerform.get('email').errors?.email">Enter valid email</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="email-input">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input formControlName="password" matInput type="password" [(ngModel)]="user.password" required />
+                    <mat-error *ngIf="registerform.get('password').errors?.required">Passowrd is required</mat-error>
+                    <mat-error *ngIf="registerform.get('password').errors?.minlength">Password must more than 5</mat-error>
+                </mat-form-field>
+            </div>
+            <button class="btn" type="submit">Register</button>
+            <button type="reset" class="btn" id="btn1">Reset</button>
+            </form>
+    </mat-card-content>
+</mat-card>

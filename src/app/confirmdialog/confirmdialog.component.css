@@ -1,0 +1,22 @@
+#class-icon{
+    cursor: pointer;
+    margin-left: 320px;
+    order: 2;
+    font-weight: bolder;
+}
+#no-btn{
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: orangered;
+    width: 150px;
+    margin-left: 10px;
+    outline: none;
+}
+#yes-btn{
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: rgb(21, 201, 233);
+    width: 150px;
+    margin-left: 15px;
+    outline: none;
+}

@@ -1,0 +1,8 @@
+<div>
+    <div><mat-icon id="class-icon" (click)="closedialog()">close</mat-icon></div>
+    <div class="content-continer">
+        <span class="content"><h2>Are you sure you want delete?</h2></span>
+    </div>
+    <button mat-flat-button id="no-btn" [mat-dialog-close]="false">No</button>
+    <button mat-flat-button id="yes-btn" [mat-dialog-close]="true">YES</button>
+</div>

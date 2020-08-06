@@ -1,0 +1,50 @@
+<div class="container">
+    <mat-card class="card">
+    <h2>Update Employee</h2>
+    <div>
+    <form [formGroup]="registerForm" class="example-form" (ngSubmit)="onSubmit()">
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <input matInput type="text" placeholder="enter Name" id="name" [(ngModel)]="employee.name" name="name" formControlName="name">
+        <mat-error *ngIf="hasError('name', 'required')">Name is required</mat-error>
+        <mat-error *ngIf="hasError('name', 'maxlength')">You have more than 60 characters</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <input matInput type="email" placeholder="enter Email" id="email" [(ngModel)]="employee.email" name="email" formControlName="email">
+        <mat-error *ngIf="hasError('email', 'required')">Email is required</mat-error>
+        <mat-error *ngIf="hasError('email', 'email')">Please Enter valid Email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <input matInput type="text" placeholder="Enter JobTitle" id="jobTitle"  [(ngModel)]="employee.jobTitle" name="jobTitle" formControlName="jobtitle">
+        <mat-error *ngIf="hasError('jobtitle', 'required')">Name is required</mat-error>
+        <mat-error *ngIf="hasError('jobtitle', 'maxlength')">You have more than 60 characters</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <input matInput type="text" placeholder="Enter EmpId" id="empId" [(ngModel)]="employee.empId" name="empId" formControlName="empid">
+        <mat-error *ngIf="hasError('empid', 'required')">Name is required</mat-error>
+        <mat-error *ngIf="hasError('empid', 'maxlength')">You have more than 60 characters</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <input matInput placeholder="Enter Phone No" id="phone" [(ngModel)]="employee.phone" name="phone" formControlName="phone">
+        <mat-error *ngIf="hasError('phone', 'required')">PhoneNo is required</mat-error>
+        <mat-error *ngIf="hasError('phone', 'maxlength')">Phone Number Must 10 digits</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <input matInput [matDatepicker]="picker" placeholder="Choose Date" 
+        id="joinDate" [(ngModel)]="employee.joinDate" name="joinDate" formControlName="joindate">
+        <mat-error *ngIf="hasError('joindate', 'required')">Join date is required</mat-error>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button class="btn" color="primary" [disabled]="!registerForm.valid">Submit</button> &nbsp;
+      <button mat-raised-button class="btn" color="warn" (click)="onCancel()">Cancel</button>
+  </form>
+</div>
+</mat-card>
+</div>
